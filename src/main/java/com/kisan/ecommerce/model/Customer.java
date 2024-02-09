@@ -16,16 +16,27 @@ public class Customer implements Serializable {
     private String email;
     private String phone;
     private String imageUrl;
+    private String customerCode;
+
+    public String getCustomerCode() {
+        return customerCode;
+    }
+
+    public void setCustomerCode(String customerCode) {
+        this.customerCode = customerCode;
+    }
 
     public Customer(){
 
     }
 
-    public Customer(String name, String email, String phone, String imageUrl) {
+    public Customer(String name, String email, String phone, String imageUrl, String customerCode) {
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.imageUrl = imageUrl;
+        this.customerCode = customerCode;
+
     }
 
     public Long getId() {
@@ -76,6 +87,7 @@ public class Customer implements Serializable {
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
+                ", customerCode='" + customerCode + '\'' +
                 '}';
     }
 }
